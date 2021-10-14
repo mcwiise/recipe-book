@@ -14,5 +14,5 @@ jobs:
         uses: actions/checkout@v2
       - name: "Check source branch syntax is OK"
         run: |
-          echo "dev on push. "
+          echo "dev on push -> ${{ github.github.event_name }}, ${{ github.github.action }} "
           exit 0
