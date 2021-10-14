@@ -15,5 +15,5 @@ jobs:
         uses: actions/checkout@v2
       - name: "Check source branch syntax is OK"
         run: |
-          echo "release on pull request -> ${{ github.event_name }}, ${{ github.action }}, ${{ github.github.head_ref }} "
+          echo "release on pull request -> ${{ github.event_name }}, ${{ github.action }}, ${{ github.head_ref }} "
           exit 0
