@@ -1,0 +1,19 @@
+name: Continuous Integration (Feature Branch)
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - release
+
+jobs:
+  check-source-branch:
+    name: Check source branch syntax
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Use github actions. "
+        uses: actions/checkout@v2
+      - name: "Check source branch syntax is OK"
+        run: |
+          echo "release on pull request. "
+          exit 0
