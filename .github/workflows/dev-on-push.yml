@@ -1,4 +1,4 @@
-name: Continuous Deployment (DEV Environment)
+name: dev on push
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: Continuous Integration (Feature Branch)
+name: release on pull request
 
 on:
   pull_request:
