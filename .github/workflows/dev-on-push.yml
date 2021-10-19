@@ -9,10 +9,11 @@ jobs:
   check-source-branch:
     name: Check source branch syntax
     runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/dev' }}
     steps:
       - name: "Use github actions. "
         uses: actions/checkout@v2
       - name: "Check source branch syntax is OK"
         run: |
-          echo "dev on push -> ${{ github.event_name }}, ${{ github.action }}, ${{ github.head_ref }} "
+          echo "dev on push -> ${{ github.event.pull_request.merged }} ${{ github.event.pull_request.head.ref }} ${{ github.event_name }}, ${{ github.action }}, ${{ github.head_ref }} "
           exit 0
