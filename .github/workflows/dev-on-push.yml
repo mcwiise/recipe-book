@@ -9,7 +9,7 @@ jobs:
   check-source-branch:
     name: Check source branch syntax
     runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/dev' }}
+    if: ${{ github.ref == 'refs/heads/master' }}
     steps:
       - name: "Use github actions. "
         uses: actions/checkout@v2
