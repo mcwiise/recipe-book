@@ -9,6 +9,7 @@ jobs:
   check-source-branch:
     name: Check source branch syntax
     runs-on: ubuntu-latest
+    if: ${{ startsWith(github.head_ref, 'feature/') }}
     steps:
       - name: "Use github actions. "
         uses: actions/checkout@v2
